@@ -2,11 +2,7 @@
 #include <SD.h>
 #include <SPI.h>
 
-SDLogging::SDLogging(uint8_t chipSelect) : chipSelect(chipSelect), initialized(false), fileOpen(false) {
-    if (SD.begin(chipSelect)) {
-        initialized = true;
-    }
-}
+SDLogging::SDLogging(uint8_t chipSelect) : chipSelect(chipSelect), initialized(false), fileOpen(false) {}
 
 SDLogging::~SDLogging() {
     closeFile();

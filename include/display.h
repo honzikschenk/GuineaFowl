@@ -14,7 +14,7 @@ enum DisplayMode {
 
 class Display {
     public:
-        Display() : oled(128, 64, &Wire) {};
+        Display();
         
         void begin();
         void clear();
@@ -34,4 +34,4 @@ class Display {
 };
 
 
-# endif
+#endif
